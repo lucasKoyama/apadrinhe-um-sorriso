@@ -1,0 +1,16 @@
+.navbar {
+  background-color: var(--chumbo);
+  color: #fff;
+}
+
+.primary {
+  background-color: var(--amarelo);
+  width: 170px;
+  height: 50px;
+}
+
+.secondary {
+  background-color: #fff;
+  width: 170px;
+  height: 50px;
+}
