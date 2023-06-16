@@ -34,12 +34,16 @@
 }
 
 .show-menu {
-  transform: translateY(0);
+  transform: translateY(5%);
   transition: all ease 0.5s;
 }
 
 .nav-list li {
-  padding: 10px;
+  padding: 8px;
+}
+
+.nav-list li a {
+  color: var(--preto);
 }
 
 .header button.navbar {
