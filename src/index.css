@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --amarelo: #F2C94C;
   --bege: #FCEDC6;
@@ -31,6 +37,7 @@ button {
 
 a {
   text-decoration: none;
+  color: var(--preto);
   cursor: pointer;
 }
 
