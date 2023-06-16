@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../../styles/buttons/CustomButton.css';
+import '../../styles/components/buttons/CustomButton.css';
 
 function CustomButton({btnText, classe}) {
   return (<button className={classe}>{btnText}</button>);
