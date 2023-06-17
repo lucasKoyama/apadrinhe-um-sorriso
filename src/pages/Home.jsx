@@ -1,5 +1,10 @@
 import CustomSection from "../components/CustomSection";
-import fotoTest from '../images/mudarFoto.png';
+import ProjectCard from "../components/cards/ProjectCard";
+import MemberCard from "../components/cards/MemberCard";
+import ServiceCard from "../components/cards/ServiceCard";
+import projects from "../components/cards/Data/projectsData";
+import members from "../components/cards/Data/membersData";
+import fotoTest from "../images/mudarFoto.png";
 
 function Home() {
   return (
@@ -20,6 +25,31 @@ function Home() {
         sideTitle="Sobre nós"
         mainTitle="Lorem Ipsum!"
       />
+      {
+        projects.map((project) => (
+          <ProjectCard
+            key={ project.title }
+            bgImgSrc={ project.bgImgSrc }
+            title={ project.title }
+            paragraph={ project.paragraph }
+          />
+        ))
+      }
+      <ServiceCard
+        faIcon="fa-solid fa-hands-holding-child"
+        title="Suporte familiar"
+        paragraph="Mauris volutpat cursus placerat. Nullam a dui dapibus, fermentum lectus eget, vestibulum nibh."
+      />
+      {
+        members.map((member) => (
+          <MemberCard
+            key={ member.nome }
+            imgSrc={ member.imgSrc }
+            nome={ member.nome }
+            role={ member.role }
+          />
+        ))
+      }
     </>
   );
 }
