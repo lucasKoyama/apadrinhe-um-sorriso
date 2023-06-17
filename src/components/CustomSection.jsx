@@ -5,11 +5,17 @@ import '../styles/components/CustomSection.css';
 function CustomSection({bgColor, sideTitle, mainTitle, paragraphArray, btnText, sideImg}) {
   return (
     <section className="section" style={ { backgroundColor: bgColor } }>
-      <div className='photo-area'><img src={ sideImg } alt="imagem lateral" /></div>
+      {
+       sideImg
+       && <div className='photo-area'><img src={ sideImg } alt="imagem lateral" /></div>
+      }
       <div className='content-area'>
         <h4 className='side-title'><div className="sideTitle-dash" />{ sideTitle }</h4>
         <h2>{ mainTitle }</h2>
-        { paragraphArray.map((paragraph, index) => <p key={ index }>{ paragraph }</p>) }
+        { 
+          paragraphArray 
+          && paragraphArray.map((paragraph, index) => <p key={ index }>{ paragraph }</p>)
+        }
         { btnText && <CustomButton btnText={ btnText } classe="primary"/>}
       </div>
     </section>
