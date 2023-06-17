@@ -15,6 +15,11 @@ function Home() {
         btnText="Saiba mais"
         sideImg={ fotoTest }
       />
+      <CustomSection
+        bgColor="var(--section-branca)"
+        sideTitle="Sobre nós"
+        mainTitle="Lorem Ipsum!"
+      />
     </>
   );
 }
