@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import CustomButton from './buttons/CustomButton';
+import TitleParagraph from './TitleParagraph';
 import '../styles/components/CustomSection.css';
 
 function CustomSection({bgColor, sideTitle, mainTitle, paragraphArray, btnText, sideImg}) {
@@ -11,11 +12,10 @@ function CustomSection({bgColor, sideTitle, mainTitle, paragraphArray, btnText, 
       }
       <div className='content-area'>
         <h4 className='side-title'><div className="sideTitle-dash" />{ sideTitle }</h4>
-        <h1>{ mainTitle }</h1>
-        { 
-          paragraphArray 
-          && paragraphArray.map((paragraph, index) => <p key={ index }>{ paragraph }</p>)
-        }
+        <TitleParagraph
+          title={ mainTitle }
+          paragraphArray={ paragraphArray }
+        />
         { btnText && <CustomButton btnText={ btnText } classe="primary"/>}
       </div>
     </section>

@@ -1,4 +1,5 @@
 import CustomSection from "../components/CustomSection";
+import TitleParagraph from "../components/TitleParagraph";
 import ProjectCard from "../components/cards/ProjectCard";
 import MemberCard from "../components/cards/MemberCard";
 import ServiceCard from "../components/cards/ServiceCard";
@@ -9,6 +10,7 @@ import fotoTest from "../images/mudarFoto.png";
 function Home() {
   return (
     <>
+      <h2>CustomSection.jsx</h2>
       <CustomSection
         bgColor="var(--bege)"
         sideTitle="Sobre nós"
@@ -20,11 +22,25 @@ function Home() {
         btnText="Saiba mais"
         sideImg={ fotoTest }
       />
+
+
+      <h2>CustomSection.jsx sem tag p, img & button</h2>
       <CustomSection
         bgColor="var(--section-branca)"
         sideTitle="Sobre nós"
         mainTitle="Lorem Ipsum!"
       />
+
+      <h2>MemberCard.jsx</h2>
+      <div style={ { width: '20vw' } }>
+        <TitleParagraph
+          title="Exemplo"
+          paragraphArray={["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lectus dui, interdum vel semper eget"]}
+        />
+      </div>
+
+
+      <h2>ProjectCard.jsx</h2>
       {
         projects.map((project) => (
           <ProjectCard
@@ -35,11 +51,17 @@ function Home() {
           />
         ))
       }
+
+
+      <h2>ServiceCard.jsx</h2>
       <ServiceCard
         faIcon="fa-solid fa-hands-holding-child"
         title="Suporte familiar"
         paragraph="Mauris volutpat cursus placerat. Nullam a dui dapibus, fermentum lectus eget, vestibulum nibh."
       />
+
+
+      <h2>MemberCard.jsx</h2>
       {
         members.map((member) => (
           <MemberCard
@@ -50,6 +72,8 @@ function Home() {
           />
         ))
       }
+
+
     </>
   );
 }
