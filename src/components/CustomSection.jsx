@@ -11,7 +11,7 @@ function CustomSection({bgColor, sideTitle, mainTitle, paragraphArray, btnText, 
       }
       <div className='content-area'>
         <h4 className='side-title'><div className="sideTitle-dash" />{ sideTitle }</h4>
-        <h2>{ mainTitle }</h2>
+        <h1>{ mainTitle }</h1>
         { 
           paragraphArray 
           && paragraphArray.map((paragraph, index) => <p key={ index }>{ paragraph }</p>)
